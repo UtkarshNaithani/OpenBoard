@@ -8,7 +8,7 @@ const app = express(); //application Initialize and server ready
 //to display index.html without it the browser won't know
 app.use(express.static("public"));
 
-let port = 5500;
+let port = process.env.PORT || 5500;
 let server = app.listen(port,()=>{
     console.log("Listening to port " + port);
 })
